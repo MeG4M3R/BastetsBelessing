@@ -230,7 +230,7 @@ form.addEventListener("submit", (e) => {
   // after animation → submit form
   setTimeout(() => {
     e.target.submit();
-  }, 2500);
+  }, 3000);
 });
 let running = false;
 
