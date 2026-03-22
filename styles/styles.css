@@ -1,0 +1,407 @@
+/************* your name: Henry Nguyen
+
+INSTRUCTIONS:
+Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations.
+
+Comments starting with TO-DO may be left in for reference or removed entirely: all other comments should be left as-is for ease of review.
+
+You are encouraged to improve any provided CSS by using modern units and increasing responsive design functionality. However you are not supposed to rewrite the entire file.
+
+***** colour palette: *****
+- mustard yellow (used for header, footer, and buttons): #E5AF42
+- cornflower blue (used for hover states): #4278e5
+
+*/
+
+/************* site defaults *************/
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  margin: 0 25px 0 25px;
+  flex: 1;
+}
+
+/* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/************* site-wide text styling *************/
+h1 {
+  font-size: clamp(24px, 5vw, 48px);
+  text-align: center;
+  color: white;
+}
+h2 {
+  font-size: clamp(20px, 4vw, 36px);
+  margin-bottom: 12px;
+  color: white;
+}
+.large-text {
+  font-size: 24px;
+  color: white;
+}
+.e {
+  font-size: 20px;
+}
+p,
+label {
+  font-size: clamp(16px, 3vw, 18px);
+  color: white;
+}
+.fake-button {
+  background-color: #880808;
+  text-align: center;
+  line-height: 3;
+  border: 1px solid black;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 25px;
+}
+.fake-button:hover {
+  text-decoration: underline;
+  background-color: #4f0d00;
+  color: black;
+  cursor: pointer;
+}
+.blue-hover:hover {
+  text-decoration: underline;
+  background-color: #880808;
+  color: black;
+  cursor: pointer;
+}
+/************* header/footer styling *************/
+header {
+  background-color: #241f21;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 25px;
+  color: white;
+}
+footer {
+  background-color: #241f21;
+  height: 100px;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+header img {
+  height: 100px;
+}
+header a {
+  text-decoration: none;
+}
+.nav-buttons li {
+  display: inline;
+  margin-left: 20px;
+}
+.navbar a {
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+}
+.navbar a:hover {
+  text-decoration: underline;
+  background-color: #880808;
+  color: black;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger-list {
+  display: none;
+  position: absolute;
+  top: 150px;
+  right: 20px;
+  background-color: #241f21;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: right;
+}
+.hamburger-list.show {
+  display: block;
+}
+@media only screen and (max-width: 1100px) {
+  .nav-buttons {
+    display: none;
+  }
+  .hamburger-button {
+    display: block;
+  }
+}
+/************* index page *************/
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.index .flex {
+  justify-content: center;
+  margin: 0 100px 0 100px;
+}
+.index h2 {
+  line-height: 1;
+}
+.index p {
+  margin-bottom: 12px;
+}
+.about-us {
+  order: 1;
+}
+.index img {
+  order: 2;
+  width: 300px;
+  padding: 25px;
+}
+.fake-button {
+  width: 200px;
+}
+/* Using same logic as the hamburger menu to display the page as a column (instead of having responsive widths) */
+@media only screen and (max-width: 1100px) {
+  .index .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/************* bookings page *************/
+.booking-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.booking-page p {
+  font-size: clamp(16px, 3vw, 18px);
+}
+/* Terms page (left-align only) */
+.terms-page {
+  text-align: left;
+}
+.terms-page p {
+  text-align: left;
+}
+.booking-page form section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.booking-page form label {
+  width: 150px;
+  text-align: right;
+  margin-right: 24px;
+}
+.booking-page form input,
+.booking-page form select {
+  width: 300px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+.booking-page form input[type="checkbox"] {
+  width: auto;
+  margin-left: 30px;
+  margin-right: 8px;
+  border: 2px solid #e5af42;
+  border-radius: 6px;
+  padding: 0;
+  vertical-align: middle;
+  accent-color: #e5af42;
+  transform: scale(1.2);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.booking-page form input[type="checkbox"]:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 8px rgba(229, 175, 66, 0.5);
+}
+.booking-page form section.checkbox {
+  display: block;
+  text-align: left;
+}
+@media only screen and (max-width: 600px) {
+  .booking-page form section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .booking-page form label {
+    width: auto;
+    text-align: left;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .booking-page form input,
+  .booking-page form select {
+    width: 100%;
+  }
+}
+.day-selector {
+  margin-bottom: 12px;
+  gap: 20px;
+}
+.day-selector li {
+  width: 60px;
+}
+.small-button {
+  margin: 5px;
+}
+.day-selector li,
+.small-button {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.top-margin {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+#clear-button {
+  width: clamp(150px, 30vw, 200px);
+  margin: auto;
+}
+.member-video-container {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.member-video-container.show {
+  margin-top: 10px;
+  display: block;
+  opacity: 1;
+}
+.clicked {
+  background-color: #880808;
+  color: black;
+}
+@media only screen and (max-width: 600px) {
+  .day-selector {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/************* contact page *************/
+#home-page {
+  display: none;
+}
+#show-home-page {
+  display: flex;
+}
+#home-message {
+  font-size: 16px;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact label {
+  width: 150px;
+  text-align: right;
+  margin-right: 24px;
+}
+.contact input,
+.contact textarea,
+.contact button {
+  width: 300px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  padding: 5px;
+}
+.contact textarea {
+  height: 150px;
+  resize: vertical;
+  border-bottom-right-radius: 0px;
+}
+#submit-button {
+  /* hard-coded the values because I dont know how to do the math method */
+  width: 312.5px;
+  cursor: pointer;
+  margin-left: 199.5px;
+}
+@media only screen and (max-width: 600px) {
+  .contact label,
+  .contact input,
+  .contact textarea,
+  .contact button {
+    width: 30vw;
+  }
+  #submit-button {
+    width: 65vw;
+    margin: auto;
+  }
+}
+#c {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  display: none; /* 👈 IMPORTANT */
+}
+main.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.card {
+  background: #241f21;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 12px;
+  border: 1px solid black;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+.card > section {
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+.notice {
+  text-align: center;
+  color: #ff4444;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1em;
+}
+.day {
+  color: white;
+}
+.terms {
+  color: lightskyblue;
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bastet's Belessing - Contact Us</title>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../scripts/contact.js" defer></script>
+    <script src="../scripts/hamburger.js" defer></script>
+  </head>
+  <canvas id="c"></canvas>
+  <style>
+    header {
+      position: relative;
+      z-index: 10000;
+    }
+
+    footer {
+      position: relative;
+      z-index: 10000;
+    }
+
+    main {
+      position: relative;
+      z-index: 10000;
+    }
+
+    #c {
+      position: fixed;
+      inset: 0;
+      z-index: 1; /* 👈 IMPORTANT: keep it behind UI */
+      pointer-events: none; /* 👈 allows clicking form/buttons */
+    }
+  </style>
+  <body>
+    <header>
+      <a href="../index.html" class="flex">
+        <img src="../images/logo-bastet.png" alt="Bastet's Belessing Logo" />
+        <h1>Bastet's Belessing</h1>
+      </a>
+      <nav class="navbar">
+        <ul class="nav-buttons">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- Credits to https://www.youtube.com/watch?v=gOXYcXKVl1c for help with the hamburger menu code. -->
+        <div class="hamburger">
+          <button class="hamburger-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="#000000"
+                fill-rule="evenodd"
+                d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="hamburger-list">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contact" id="contact-page">
+      <section class="card">
+        <h2>We'd love to hear from you!</h2>
+        <form>
+          <div class="flex">
+            <label for="user-name">Your name:</label>
+            <input type="text" id="user-name" />
+          </div>
+          <div class="flex">
+            <label for="user-email">Your email:</label>
+            <input type="email" id="user-email" />
+          </div>
+          <div class="flex">
+            <label for="user-message">Your message:</label>
+            <textarea id="user-message"></textarea>
+          </div>
+          <button
+            class="fake-button blue-hover"
+            type="submit"
+            id="submit-button"
+          >
+            Submit!
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 Bastet’s Blessing — Private Sanctuary</p>
+    </footer>
+  </body>
+</html>

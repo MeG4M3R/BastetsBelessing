@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bastet's Belessing - Booking</title>
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../scripts/booking.js" defer></script>
+    <script src="../scripts/hamburger.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="../index.html" class="flex">
+        <img src="../images/logo-bastet.png" alt="Bastet's Belessing Logo" />
+        <h1>Bastet's Belessing</h1>
+      </a>
+      <nav class="navbar">
+        <ul class="nav-buttons">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- Credits to https://www.youtube.com/watch?v=gOXYcXKVl1c for help with the hamburger menu code. -->
+        <div class="hamburger">
+          <button class="hamburger-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="#000000"
+                fill-rule="evenodd"
+                d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        <ul class="hamburger-list">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="booking-page">
+      <section class="flex card">
+        <div>
+        <section>
+          <h2>Enroll Your Feline Companion</h2>
+        </section>
+        <section>
+        <p class="notice">
+          ⚠ Only 3 enrollment spots remaining this cycle — applications close
+          soon
+        </p><br>
+      </section>
+      <section>
+        <form>
+
+      <section>
+          <label>Owner Name</label>
+          <input type="text" required />
+</section>
+      <section>
+          <label>Email</label>
+          <input type="email" required />
+</section>
+      <section>
+          <label>Cat’s Name</label>
+          <input type="text" required />
+</section>
+      <section>
+          <label>Program</label>
+          <select>
+            <option>Standard Renewal</option>
+            <option>Extended Vitality</option>
+            <option>Divine Ascension</option>
+          </select>
+          </section>
+<section class="checkbox flex">
+          <label>
+            <input type="checkbox" required /><span class="notice">*</span> I have reviewed, understand and agree to the <a class="terms" href="terms.html" target="_blank">Terms & Conditions</a>.
+          </label>
+          </section>
+          
+
+          <button type="submit" class="fake-button e">Submit Enrollment</button>
+        </form>
+      </div>
+      </section>
+
+      <section class="card">
+        <h2>Members Only Access</h2>
+
+        <p>
+          Bastet’s Blessing provides a private digital portal exclusively for
+          enrolled clients. This space is designed to support reflection and
+          understanding throughout the process.
+        </p>
+
+        <p>
+          <br />Access to this portal is granted only after enrollment and may
+          be restricted during active transformation periods.
+        </p>
+
+        <p>
+          <br />For the integrity of our work, certain information remains
+          accessible only to those who have fully committed to the journey.
+        </p>
+
+        <button id="member-login" class="fake-button large-text submit-button">
+          Member Login
+        </button>
+        <div
+          id="member-video-container"
+          class="member-video-container"
+          style="text-align: center"
+        >
+          <video id="myVideo" controls>
+            <source
+              id="videoSource"
+              src="../images/sign-in.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Booking Rate Calculator</h2>
+        <p>My cat will come in on</p>
+        <ul class="flex day-selector">
+          <li class="blue-hover day" id="monday">Mon</li>
+          <li class="blue-hover day" id="tuesday">Tue</li>
+          <li class="blue-hover day" id="wednesday">Wed</li>
+          <li class="blue-hover day" id="thursday">Thu</li>
+          <li class="blue-hover day" id="friday">Fri</li>
+        </ul>
+        <p>
+          for
+          <span class="clicked small-button blue-hover" id="full">full</span> or
+          <span class="small-button blue-hover" id="half">half</span> days.
+        </p>
+        <p class="top-margin large-text">
+          My weekly cost will be $<span id="calculated-cost">0</span>.
+        </p>
+        <p class="fake-button large-text" id="clear-button">Clear Days</p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2026 Bastet’s Blessing — Private Sanctuary</p>
+    </footer>
+  </body>
+</html>
